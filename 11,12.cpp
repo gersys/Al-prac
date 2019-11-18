@@ -35,3 +35,24 @@ int main() {
 	printf("%d", cnt);
 
 	return 0;
+}
+
+int main() {
+	//freopen("input.txt","rt",stdin);
+	int n, total = 0, c = 1, d = 9, res = 0;
+	scanf("%d", &n);
+
+	while (total + d < n) {
+		res = res + (c * d);
+		total = total + d;
+		c++;
+		d = d * 10;
+	}
+
+	res = res + ((n - total) * c);
+	printf("%d", res);
+
+	return 0;
+
+}
+
